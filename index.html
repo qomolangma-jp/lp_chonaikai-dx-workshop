@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>町内会DX 体験＆意見交換会 | 小松市</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Zen Maru Gothic & Noto Sans JP -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-green': '#3B8B68',
+            'brand-green-light': '#EBF7F0',
+            'brand-green-dark': '#2A664C',
+            'brand-orange': '#F48C42',
+            'brand-orange-hover': '#E0772E',
+            'brand-cream': '#FDFBF7',
+            'brand-yellow-soft': '#FFF7E6',
+            'text-main': '#2D3748',
+          },
+          fontFamily: {
+            sans: ['"Noto Sans JP"', 'sans-serif'],
+            rounded: ['"Zen Maru Gothic"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      color: #2D3748;
+      background-color: #FDFBF7;
+    }
+    .font-rounded {
+      font-family: 'Zen Maru Gothic', sans-serif;
+    }
+    /* 読みやすさのためのテキスト行間カスタム */
+    .leading-relaxed-plus {
+      line-height: 1.9;
+    }
+    /* ふんわりした影 */
+    .soft-shadow {
+      box-shadow: 0 10px 25px -5px rgba(59, 139, 104, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+    }
+    .cta-shadow {
+      box-shadow: 0 10px 20px -3px rgba(244, 140, 66, 0.4);
+    }
+    /* ボタンのバウンスアニメーション */
+    @keyframes gentle-pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+    }
+    .pulse-animation {
+      animation: gentle-pulse 2.5s infinite ease-in-out;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-brand-cream text-text-main pb-24 md:pb-12">
+
+  <!-- ヘッダー -->
+  <header class="bg-white/95 backdrop-blur sticky top-0 z-40 border-b border-emerald-100 shadow-sm">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center space-x-2">
+        <span class="bg-brand-green text-white text-xs md:text-sm font-bold px-2.5 py-1 rounded-full">小松市</span>
+        <span class="font-rounded font-bold text-gray-800 text-sm md:text-base">町内会DX 体験＆意見交換会</span>
+      </div>
+      <a href="https://forms.gle/74ixrVMCaGCC2zZn7" target="_blank" rel="noopener noreferrer" 
+         class="hidden sm:inline-flex items-center gap-1.5 bg-brand-orange hover:bg-brand-orange-hover text-white font-rounded font-bold text-sm px-4 py-2 rounded-full transition-transform active:scale-95 shadow">
+        <i class="fa-solid fa-paper-plane text-xs"></i> 参加を申し込む
+      </a>
+    </div>
+  </header>
+
+  <!-- ヒーローセクション (ファーストビュー) -->
+  <section class="relative overflow-hidden bg-gradient-to-b from-brand-green-light/80 via-brand-cream to-brand-cream pt-10 pb-16 px-4">
+    <!-- 装飾背景サークル -->
+    <div class="absolute -top-12 -left-12 w-64 h-64 bg-emerald-200/40 rounded-full blur-2xl pointer-events-none"></div>
+    <div class="absolute top-20 -right-12 w-72 h-72 bg-amber-200/40 rounded-full blur-2xl pointer-events-none"></div>
+
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <!-- バッジ -->
+      <div class="inline-flex items-center gap-2 bg-white border border-brand-green/30 text-brand-green font-rounded font-bold px-4 py-1.5 rounded-full text-sm md:text-base mb-6 shadow-sm">
+        <i class="fa-solid fa-users text-brand-green"></i> 参加型フォーラム＆体験型ワークショップ
+      </div>
+
+      <!-- メインタイトル -->
+      <h1 class="font-rounded font-extrabold text-3xl sm:text-4xl md:text-5xl text-brand-green-dark leading-tight tracking-tight mb-4">
+        町内会DX<br class="sm:hidden"> 体験＆意見交換会
+      </h1>
+      
+      <!-- サブタイトル -->
+      <p class="font-rounded font-bold text-lg sm:text-xl md:text-2xl text-amber-800 mb-6">
+        〜スマホで体験する町内会運営のリアルと、広がる地域の未来〜
+      </p>
+
+      <!-- 開催サマリーカード -->
+      <div class="bg-white/90 backdrop-blur rounded-3xl p-5 sm:p-6 mb-8 max-w-2xl mx-auto border border-emerald-100 soft-shadow text-left sm:text-center">
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 text-gray-700 font-medium text-base sm:text-lg mb-2">
+          <span class="inline-flex items-center text-emerald-800 font-bold">
+            <i class="fa-regular fa-calendar-days text-brand-green mr-2 text-xl"></i> 2026年11月26日(木)
+          </span>
+          <span class="hidden sm:inline text-gray-300">|</span>
+          <span class="inline-flex items-center text-gray-800">
+            <i class="fa-regular fa-clock text-brand-green mr-2 text-xl"></i> 18:30〜20:00 (受付 18:15〜)
+          </span>
+        </div>
+        <div class="text-sm sm:text-base text-gray-600 flex flex-wrap items-center justify-center gap-y-1 gap-x-4 pt-2 border-t border-gray-100">
+          <span><i class="fa-solid fa-location-dot text-rose-500 mr-1"></i> 第一コミュニティーセンター セミナールームA</span>
+          <span class="bg-amber-100 text-amber-900 text-xs font-bold px-2.5 py-0.5 rounded-full">参加費 無料</span>
+          <span class="bg-red-100 text-red-800 text-xs font-bold px-2.5 py-0.5 rounded-full">先着25名様</span>
+        </div>
+      </div>
+
+      <!-- 申込みCTAボタン 1 -->
+      <div class="mb-4">
+        <a href="https://forms.gle/74ixrVMCaGCC2zZn7" target="_blank" rel="noopener noreferrer" 
+           class="pulse-animation inline-flex items-center justify-center gap-3 bg-brand-orange hover:bg-brand-orange-hover text-white text-xl sm:text-2xl font-rounded font-bold px-8 py-5 rounded-2xl cta-shadow transition-all transform hover:-translate-y-1 active:translate-y-0 w-full sm:w-auto min-w-[320px]">
+          <i class="fa-solid fa-check-circle text-2xl"></i>
+          <span>今すぐ参加を申し込む</span>
+          <i class="fa-solid fa-chevron-right text-lg"></i>
+        </a>
+      </div>
+      <p class="text-xs sm:text-sm text-gray-500">
+        <i class="fa-solid fa-shield-halved text-emerald-600 mr-1"></i> Googleフォームより簡単1分でお申込みいただけます（先着順）
+      </p>
+    </div>
+  </section>
+
+  <!-- 趣旨・メッセージセクション -->
+  <section class="max-w-4xl mx-auto px-4 py-12">
+    <div class="bg-white rounded-3xl p-6 sm:p-10 border border-emerald-100 soft-shadow relative">
+      <div class="text-center mb-6">
+        <span class="text-brand-green font-bold text-sm tracking-widest uppercase">CONCEPT</span>
+        <h2 class="font-rounded font-bold text-2xl sm:text-3xl text-gray-800 mt-1">
+          役員経験や年齢を問わず、<br class="hidden sm:inline">どなたでも大歓迎の体験会です
+        </h2>
+        <div class="w-16 h-1 bg-brand-green mx-auto rounded-full mt-3"></div>
+      </div>
+
+      <div class="space-y-5 text-gray-700 text-base sm:text-lg leading-relaxed-plus font-normal">
+        <p>
+          「紙の回覧板を回すのが大変」「役員の集まりが多くて負担が大きい」といったお悩みはありませんか？
+        </p>
+        <p>
+          町内会DX（デジタルトランスフォーメーション）は、負担を減らしながら住民同士の確かなつながりをつくるための取り組みです。
+        </p>
+        <p class="bg-brand-green-light/70 p-4 sm:p-5 rounded-2xl border-l-4 border-brand-green text-gray-800">
+          本会では、現在進めている<strong>「電子回覧板」</strong>や<strong>「自動町内放送」</strong>の進捗や、直面している課題を包み隠さず共有します。その上で、お手元のスマートフォンを使って公式LINEやクラウド運営を実際に体験していただきます。
+        </p>
+        <p>
+          「スマホの操作が少し不安…」という方も安心のサポート付き。町内会の役員経験の有無やご年齢に関わらず、地域のこれからに関心のある方ならどなたでもお気軽にご参加ください！
+        </p>
+      </div>
+
+      <!-- 対象者アイコン列 -->
+      <div class="mt-8 pt-6 border-t border-gray-100 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+        <div class="bg-brand-cream p-4 rounded-2xl border border-amber-100">
+          <i class="fa-solid fa-house-chimney-user text-brand-green text-2xl mb-2"></i>
+          <h4 class="font-bold text-sm text-gray-800">町内会役員・班長の方</h4>
+          <p class="text-xs text-gray-500 mt-1">運営の負担を少しでも減らしたい方に</p>
+        </div>
+        <div class="bg-brand-cream p-4 rounded-2xl border border-amber-100">
+          <i class="fa-solid fa-people-roof text-brand-green text-2xl mb-2"></i>
+          <h4 class="font-bold text-sm text-gray-800">地域住民の皆様</h4>
+          <p class="text-xs text-gray-500 mt-1">地域の情報受け取りを便利にしたい方に</p>
+        </div>
+        <div class="bg-brand-cream p-4 rounded-2xl border border-amber-100">
+          <i class="fa-solid fa-mobile-screen-button text-brand-green text-2xl mb-2"></i>
+          <h4 class="font-bold text-sm text-gray-800">地域づくりに関心のある方</h4>
+          <p class="text-xs text-gray-500 mt-1">年齢不問！どなたでも歓迎します</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3つの特徴ポイント -->
+  <section class="bg-emerald-50/60 py-14 px-4 border-y border-emerald-100/70">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-10">
+        <span class="bg-white text-brand-green font-bold text-xs px-3 py-1 rounded-full border border-emerald-200">POINT</span>
+        <h2 class="font-rounded font-bold text-2xl sm:text-3xl text-brand-green-dark mt-2">
+          本イベントの 3つの特徴
+        </h2>
+        <p class="text-gray-600 text-sm sm:text-base mt-2">机上の空論ではなく、見て・さわって・本音で語り合える場です</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- 特徴1 -->
+        <div class="bg-white rounded-3xl p-6 soft-shadow border border-emerald-100 flex flex-col justify-between hover:shadow-md transition-shadow">
+          <div>
+            <div class="w-12 h-12 bg-emerald-100 text-brand-green rounded-2xl flex items-center justify-center text-xl font-bold font-rounded mb-4">
+              1
+            </div>
+            <h3 class="font-rounded font-bold text-lg text-gray-800 mb-3">
+              現場の「リアル」を<br class="hidden md:inline">包み隠さず共有
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              成功事例だけでなく、現在直面している「未完成な課題」も含めて率直に共有します。良い面も苦労する面も知ることができます。
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-gray-100 text-xs text-brand-green font-semibold flex items-center">
+            <i class="fa-solid fa-circle-check mr-1.5"></i> 実際の運用状況がわかる
+          </div>
+        </div>
+
+        <!-- 特徴2 -->
+        <div class="bg-white rounded-3xl p-6 soft-shadow border border-emerald-100 flex flex-col justify-between hover:shadow-md transition-shadow">
+          <div>
+            <div class="w-12 h-12 bg-amber-100 text-brand-orange rounded-2xl flex items-center justify-center text-xl font-bold font-rounded mb-4">
+              2
+            </div>
+            <h3 class="font-rounded font-bold text-lg text-gray-800 mb-3">
+              スマホ1台で<br class="hidden md:inline">今日から即実践・体験
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              机上の説明を聞くだけでなく、公式LINEやクラウド管理をスマホで実際に操作。会場Wi-Fiを使ってその場で体感できます。
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-gray-100 text-xs text-brand-orange font-semibold flex items-center">
+            <i class="fa-solid fa-circle-check mr-1.5"></i> 手を動かして納得できる
+          </div>
+        </div>
+
+        <!-- 特徴3 -->
+        <div class="bg-white rounded-3xl p-6 soft-shadow border border-emerald-100 flex flex-col justify-between hover:shadow-md transition-shadow">
+          <div>
+            <div class="w-12 h-12 bg-teal-100 text-teal-700 rounded-2xl flex items-center justify-center text-xl font-bold font-rounded mb-4">
+              3
+            </div>
+            <h3 class="font-rounded font-bold text-lg text-gray-800 mb-3">
+              一方通行ではない<br class="hidden md:inline">本音の意見交換会
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              疑問や不安、要望を気軽に話し合える時間を設けています。対話を通じてこれからの地域の仕組みをみんなで共創します。
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-gray-100 text-xs text-teal-700 font-semibold flex items-center">
+            <i class="fa-solid fa-circle-check mr-1.5"></i> 疑問や不安もその場で相談
+          </div>
+        </div>
+      </div>
+
+      <!-- 申込みCTAボタン 2 -->
+      <div class="text-center mt-10">
+        <a href="https://forms.gle/74ixrVMCaGCC2zZn7" target="_blank" rel="noopener noreferrer" 
+           class="inline-flex items-center justify-center gap-2 bg-brand-orange hover:bg-brand-orange-hover text-white font-rounded font-bold text-lg sm:text-xl px-7 py-4 rounded-2xl cta-shadow transition-transform hover:-translate-y-0.5 active:translate-y-0">
+          <i class="fa-solid fa-pencil"></i>
+          <span>先着25名様・無料お申込みはこちら</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- プログラム詳細タイムテーブル -->
+  <section class="max-w-4xl mx-auto px-4 py-14">
+    <div class="text-center mb-10">
+      <span class="text-brand-green font-bold text-sm tracking-widest uppercase">PROGRAM</span>
+      <h2 class="font-rounded font-bold text-2xl sm:text-3xl text-gray-800 mt-1">
+        当日のプログラム構成
+      </h2>
+      <p class="text-gray-600 text-sm sm:text-base mt-2">
+        全体の所要時間は約90分（18:30〜20:00）を予定しております
+      </p>
+      <div class="w-16 h-1 bg-brand-green mx-auto rounded-full mt-3"></div>
+    </div>
+
+    <div class="space-y-4">
+      <!-- 第1部 -->
+      <div class="bg-white rounded-3xl p-6 sm:p-7 border border-emerald-100 soft-shadow flex flex-col md:flex-row gap-4 md:gap-6 items-start">
+        <div class="bg-emerald-100 text-brand-green-dark font-rounded font-bold px-4 py-2 rounded-2xl text-center shrink-0 w-full md:w-36">
+          <span class="text-xs uppercase tracking-wider block text-brand-green">Part 1</span>
+          <span class="text-xl">第 1 部</span>
+        </div>
+        <div class="flex-1">
+          <h3 class="font-rounded font-bold text-lg sm:text-xl text-gray-800 mb-2">
+            地域のいまを知る：町内会DXの現状報告と展望
+          </h3>
+          <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+            電子回覧板の実証導入や、町内放送自動化の進捗報告を行います。便利になった具体的な点だけでなく、現在直面している課題や運用のリアルな生の声まで包み隠さずお伝えします。
+          </p>
+        </div>
+      </div>
+
+      <!-- 第2部 -->
+      <div class="bg-white rounded-3xl p-6 sm:p-7 border border-amber-200 soft-shadow flex flex-col md:flex-row gap-4 md:gap-6 items-start bg-gradient-to-r from-amber-50/50 to-white">
+        <div class="bg-amber-100 text-amber-900 font-rounded font-bold px-4 py-2 rounded-2xl text-center shrink-0 w-full md:w-36">
+          <span class="text-xs uppercase tracking-wider block text-amber-700">Part 2 / 体験</span>
+          <span class="text-xl">第 2 部</span>
+        </div>
+        <div class="flex-1">
+          <h3 class="font-rounded font-bold text-lg sm:text-xl text-gray-800 mb-2">
+            スマホで体験ワーク：今日から使える地域DXツール
+          </h3>
+          <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+            参加者ご自身のスマートフォンを実際に操作し、公式LINE開設・テスト配信やクラウドを使った運営管理を体験していただきます。会場Wi-Fiをご利用いただけますのでパケット通信量も安心です。
+          </p>
+          <div class="mt-3 inline-flex items-center text-xs sm:text-sm font-semibold text-amber-800 bg-amber-100/80 px-3 py-1.5 rounded-xl">
+            <i class="fa-solid fa-mobile-screen mr-1.5"></i> ご自身のスマートフォンをお手元にご用意ください
+          </div>
+        </div>
+      </div>
+
+      <!-- 第3部 -->
+      <div class="bg-white rounded-3xl p-6 sm:p-7 border border-emerald-100 soft-shadow flex flex-col md:flex-row gap-4 md:gap-6 items-start">
+        <div class="bg-teal-100 text-teal-800 font-rounded font-bold px-4 py-2 rounded-2xl text-center shrink-0 w-full md:w-36">
+          <span class="text-xs uppercase tracking-wider block text-teal-700">Part 3 / 対話</span>
+          <span class="text-xl">第 3 部</span>
+        </div>
+        <div class="flex-1">
+          <h3 class="font-rounded font-bold text-lg sm:text-xl text-gray-800 mb-2">
+            意見交換・質疑応答 ＆ 今後の地域プロジェクト紹介
+          </h3>
+          <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+            体験してみての率直な感想や、「高齢者でも使える？」「管理はどうする？」といった疑問・不安を共有し合う意見交換会です。参加者の声をもとに、これからの地域づくりを一緒に進める仲間づくり・プロジェクトをご案内します。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 開催概要セクション -->
+  <section class="bg-white py-14 px-4 border-t border-emerald-100">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-10">
+        <span class="text-brand-green font-bold text-sm tracking-widest uppercase">OUTLINE</span>
+        <h2 class="font-rounded font-bold text-2xl sm:text-3xl text-gray-800 mt-1">
+          開催概要
+        </h2>
+        <div class="w-16 h-1 bg-brand-green mx-auto rounded-full mt-3"></div>
+      </div>
+
+      <!-- 概要リスト -->
+      <div class="bg-brand-cream rounded-3xl p-6 sm:p-8 border border-amber-100 soft-shadow">
+        <dl class="divide-y divide-gray-200/80">
+          <!-- 日時 -->
+          <div class="py-4 sm:py-5 flex flex-col sm:flex-row sm:items-center">
+            <dt class="w-full sm:w-36 text-brand-green-dark font-rounded font-bold text-base flex items-center mb-1 sm:mb-0">
+              <i class="fa-regular fa-calendar-check text-brand-green w-6"></i> 日時
+            </dt>
+            <dd class="text-gray-800 font-bold text-lg sm:text-xl">
+              2026年11月26日(木) 18:30開始 <span class="text-sm font-normal text-gray-600">(受付 18:15〜)</span>
+              <p class="text-xs sm:text-sm text-gray-600 font-normal mt-0.5">※所要時間：約90分（終了予定 20:00）</p>
+            </dd>
+          </div>
+
+          <!-- 会場 -->
+          <div class="py-4 sm:py-5 flex flex-col sm:flex-row sm:items-start">
+            <dt class="w-full sm:w-36 text-brand-green-dark font-rounded font-bold text-base flex items-center mb-1 sm:mb-0 pt-1">
+              <i class="fa-solid fa-map-location-dot text-brand-green w-6"></i> 会場
+            </dt>
+            <dd class="text-gray-800 text-base sm:text-lg">
+              <span class="font-bold">第一コミュニティーセンター セミナールームA</span>
+              <p class="text-xs sm:text-sm text-gray-500 mt-1">※テーブル・イス完備の研修室にて開催いたします</p>
+            </dd>
+          </div>
+
+          <!-- 主催 -->
+          <div class="py-4 sm:py-5 flex flex-col sm:flex-row sm:items-center">
+            <dt class="w-full sm:w-36 text-brand-green-dark font-rounded font-bold text-base flex items-center mb-1 sm:mb-0">
+              <i class="fa-solid fa-user-tie text-brand-green w-6"></i> 主催
+            </dt>
+            <dd class="text-gray-800 text-base sm:text-lg font-bold">
+              小松市議会議員 吉柴文悟
+            </dd>
+          </div>
+
+          <!-- 定員・対象 -->
+          <div class="py-4 sm:py-5 flex flex-col sm:flex-row sm:items-start">
+            <dt class="w-full sm:w-36 text-brand-green-dark font-rounded font-bold text-base flex items-center mb-1 sm:mb-0 pt-1">
+              <i class="fa-solid fa-users-viewfinder text-brand-green w-6"></i> 定員・対象
+            </dt>
+            <dd class="text-gray-800 text-base leading-relaxed">
+              <div class="inline-block bg-rose-100 text-rose-900 font-bold px-3 py-1 rounded-full text-sm mb-1.5">
+                定員 25名（事前申込制・先着順）
+              </div>
+              <p class="text-xs text-rose-600 mb-2">※定員に達し次第、募集を締め切らせていただきます。お早めにお申し込みください。</p>
+              <p class="text-gray-700"><strong>対象：</strong>町内会役員・住民の皆様、地域のデジタル化に関心のある方（どなたでも歓迎）</p>
+            </dd>
+          </div>
+
+          <!-- 参加費・設備 -->
+          <div class="py-4 sm:py-5 flex flex-col sm:flex-row sm:items-center">
+            <dt class="w-full sm:w-36 text-brand-green-dark font-rounded font-bold text-base flex items-center mb-1 sm:mb-0">
+              <i class="fa-solid fa-circle-info text-brand-green w-6"></i> 参加費・設備
+            </dt>
+            <dd class="text-gray-800 text-base font-medium flex flex-wrap gap-2 items-center">
+              <span class="bg-emerald-100 text-emerald-900 font-bold px-3 py-1 rounded-lg">参加費 無料</span>
+              <span class="bg-blue-100 text-blue-900 font-semibold px-3 py-1 rounded-lg"><i class="fa-solid fa-wifi mr-1"></i> 会場内 Wi-Fi完備</span>
+            </dd>
+          </div>
+
+          <!-- 持ち物 -->
+          <div class="py-4 sm:py-5 flex flex-col sm:flex-row sm:items-center">
+            <dt class="w-full sm:w-36 text-brand-green-dark font-rounded font-bold text-base flex items-center mb-1 sm:mb-0">
+              <i class="fa-solid fa-bag-shopping text-brand-green w-6"></i> 持ち物
+            </dt>
+            <dd class="text-gray-800 text-base font-bold text-brand-orange-hover">
+              普段お使いのスマートフォン
+              <span class="text-xs font-normal text-gray-500 block sm:inline sm:ml-2">（第2部の体験ワークショップで使用します）</span>
+            </dd>
+          </div>
+        </dl>
+      </div>
+
+      <!-- 申込みCTAボタン 3 -->
+      <div class="text-center mt-10">
+        <a href="https://forms.gle/74ixrVMCaGCC2zZn7" target="_blank" rel="noopener noreferrer" 
+           class="inline-flex items-center justify-center gap-3 bg-brand-orange hover:bg-brand-orange-hover text-white text-xl font-rounded font-bold px-8 py-5 rounded-2xl cta-shadow transition-transform hover:-translate-y-0.5 active:translate-y-0 w-full sm:w-auto">
+          <i class="fa-solid fa-pen-to-square text-xl"></i>
+          <span>参加申込フォームを開く（無料）</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- よくあるご質問 (FAQ) -->
+  <section class="max-w-3xl mx-auto px-4 py-12">
+    <div class="text-center mb-8">
+      <span class="text-brand-green font-bold text-sm tracking-widest uppercase">Q &amp; A</span>
+      <h2 class="font-rounded font-bold text-2xl sm:text-3xl text-gray-800 mt-1">
+        よくあるご質問
+      </h2>
+      <div class="w-16 h-1 bg-brand-green mx-auto rounded-full mt-3"></div>
+    </div>
+
+    <div class="space-y-4">
+      <div class="bg-white rounded-2xl p-5 border border-emerald-100 soft-shadow">
+        <h3 class="font-bold text-base sm:text-lg text-brand-green-dark flex items-start">
+          <span class="bg-brand-green text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 shrink-0 mt-0.5">Q</span>
+          スマートフォンの操作があまり得意ではありませんが、参加できますか？
+        </h3>
+        <p class="text-gray-600 text-sm sm:text-base mt-2 ml-9 leading-relaxed">
+          はい、まったく問題ありません！スタッフがサポートしながら一緒に画面を確認して進めますので、普段電話や簡単なLINEを使っている程度の方でも安心してご参加いただけます。
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-5 border border-emerald-100 soft-shadow">
+        <h3 class="font-bold text-base sm:text-lg text-brand-green-dark flex items-start">
+          <span class="bg-brand-green text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 shrink-0 mt-0.5">Q</span>
+          町内会の役員をやっていませんが参加できますか？
+        </h3>
+        <p class="text-gray-600 text-sm sm:text-base mt-2 ml-9 leading-relaxed">
+          もちろん大歓迎です。これからの地域の連絡方法や防災情報の受け取り方に関心のある住民の皆様、どなたでもお気軽にお越しください。
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-5 border border-emerald-100 soft-shadow">
+        <h3 class="font-bold text-base sm:text-lg text-brand-green-dark flex items-start">
+          <span class="bg-brand-green text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 shrink-0 mt-0.5">Q</span>
+          会場のWi-Fiは使えますか？通信料が心配です。
+        </h3>
+        <p class="text-gray-600 text-sm sm:text-base mt-2 ml-9 leading-relaxed">
+          会場内には無料のWi-Fiを完備しております。体験時のデータ通信量を気にせずご参加いただけます。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 最終お申し込みCTAエリア -->
+  <section class="bg-gradient-to-br from-brand-green-dark to-brand-green text-white py-14 px-4 text-center">
+    <div class="max-w-3xl mx-auto">
+      <span class="bg-amber-400 text-stone-900 font-bold text-xs sm:text-sm px-3.5 py-1.5 rounded-full inline-block mb-3">
+        事前申込制・先着25名様
+      </span>
+      <h2 class="font-rounded font-extrabold text-2xl sm:text-3xl md:text-4xl leading-snug mb-3">
+        地域のこれからの仕組みを、<br>一緒に体験して話してみませんか？
+      </h2>
+      <p class="text-emerald-100 text-sm sm:text-base mb-8 max-w-xl mx-auto">
+        定員に達し次第、受付終了となります。参加費は無料ですので、ぜひお気軽にお申し込みください。
+      </p>
+
+      <div class="mb-5">
+        <a href="https://forms.gle/74ixrVMCaGCC2zZn7" target="_blank" rel="noopener noreferrer" 
+           class="inline-flex items-center justify-center gap-3 bg-brand-orange hover:bg-brand-orange-hover text-white text-xl sm:text-2xl font-rounded font-bold px-10 py-5 rounded-2xl cta-shadow transition-all transform hover:scale-105 active:scale-95 w-full sm:w-auto">
+          <i class="fa-solid fa-paper-plane text-2xl"></i>
+          <span>Googleフォームで申し込む</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-base ml-1"></i>
+        </a>
+      </div>
+
+      <p class="text-xs text-emerald-200">
+        ※リンク先はGoogleフォームの安全なお申込みページです。
+      </p>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="bg-stone-800 text-gray-300 py-8 px-4 text-center text-xs sm:text-sm">
+    <div class="max-w-4xl mx-auto space-y-3">
+      <div class="font-rounded font-bold text-base text-white">
+        町内会DX 体験＆意見交換会
+      </div>
+      <p class="text-gray-400">
+        【主催】小松市議会議員 吉柴文悟
+      </p>
+      <div class="pt-4 border-t border-stone-700 text-gray-400">
+        &copy; 2026 町内会DX 体験＆意見交換会 All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- スマホ閲覧時：固定下部申込バー（全年齢向けに押しやすく常時表示） -->
+  <aside aria-label="お申し込みバー" class="sm:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur border-t border-emerald-200 p-3 shadow-lg flex items-center justify-between gap-3">
+    <div class="leading-tight pl-1">
+      <span class="text-xs bg-red-100 text-red-800 font-bold px-2 py-0.5 rounded-full inline-block">先着25名・無料</span>
+      <p class="text-xs text-gray-700 font-bold mt-1">11/26(木) 18:30〜</p>
+    </div>
+    <a href="https://forms.gle/74ixrVMCaGCC2zZn7" target="_blank" rel="noopener noreferrer" 
+       class="flex-1 bg-brand-orange hover:bg-brand-orange-hover text-white font-rounded font-bold text-center py-3 px-4 rounded-xl text-base shadow flex items-center justify-center gap-2">
+      <i class="fa-solid fa-paper-plane text-sm"></i>
+      <span>今すぐ申し込む</span>
+    </a>
+  </aside>
+
+</body>
+</html>
